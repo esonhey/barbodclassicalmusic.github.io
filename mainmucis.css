@@ -1,0 +1,150 @@
+/* استایل‌های کلی */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ede4d3;
+    color: #5a3e2b;
+}
+
+/* هدر */
+header {
+    background-color: #3e2723;
+    color: white;
+    padding: 15px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #d7ccc8;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc80;
+}
+
+/* بخش معرفی */
+.hero {
+    background-image: url('piano-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ffcc80; /* رنگ متناسب با رنگ‌های دیگر سایت */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* اضافه کردن سایه به متن برای زیبایی بیشتر */
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fcbc5c; /* رنگ متناسب با رنگ‌های دیگر سایت */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* اضافه کردن سایه به متن برای زیبایی بیشتر */
+    background-origin: padding-box; /* جلوگیری از اعمال سایه بر روی پس زمینه */
+    padding: 10px; /* افزودن فاصله بین متن و حاشیه‌های پاراگراف */
+    border-radius: 5px; /* گوشه‌های گرد برای پاراگراف */
+    line-height: 2; /* فاصله بین خطوط برای خوانایی بهتر */
+    max-width: 800px; /* حداکثر عرض برای جلوگیری از طولانی شدن خطوط */
+    margin: 0 auto 20px; /* مرکز کردن متن */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #795548;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #a1887f;
+    transform: scale(1.1);
+}
+
+/* بخش آهنگسازان */
+.composer-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.composer {
+    background: #d7ccc8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.composer:hover {
+    transform: translateY(-5px);
+}
+
+.composer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* فوتر */
+footer {
+    background-color: #3e2723;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+footer a {
+    color: #ffcc80;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffab40;
+}
+
+

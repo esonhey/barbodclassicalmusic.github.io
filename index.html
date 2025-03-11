@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>barbod Classical Music</title>
+    <meta name="description" content="به دنیای موسیقی کلاسیک خوش آمدید. کاوشی در دنیای موسیقی فاخر و بی‌نظیر کلاسیک.">
+    <meta name="keywords" content="موسیقی کلاسیک, موتسارت, باخ, بتهوون, آهنگسازان بزرگ, پلی‌لیست پیشنهادی">
+    <link rel="icon" type="image/x-icon" href="logo of my site.jpg">
+    <link rel="stylesheet" href="mainmucis.css">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="logo.jpg" alt="لوگوی سایت">
+            <nav>
+                <ul>
+                    <li><a href="index.html">صفحه اصلی</a></li>
+                    <li><a href="RECOM.html">آهنگ‌های پیشنهادی</a></li>
+                    <li><a href="spotify-segment.html">ساخت اکانت اسپاتیفای</a></li>
+                    <li><a href="weblog/blog.html">وبلاگ</a></li>
+                    <li><a href="contact/contact.html">تماس با من</a></li>
+                    <li><a href="about me.html">درباره من</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>به دنیای موسیقی کلاسیک خوش آمدید</h1>
+        <p>کاوشی در دنیای موسیقی فاخر و بی‌نظیر کلاسیک</p>
+        <a href="#composers" class="btn" onclick="smoothScroll(event)">بیشتر بخوانید</a>
+    </section>
+    
+    <section id="composers" class="composers">
+        <h2>آهنگسازان بزرگ</h2>
+        <div class="composer-list">
+            <div class="composer">
+                <img src="mozart.jpg" alt="Mozart">
+                <h3>ولفگانگ آمادئوس موتسارت</h3>
+                <p>.یکی از بزرگ‌ترین آهنگسازان تاریخ</p>
+                <a href="mozart/mozart.html" class="btn">بیشتر بخوانید</a>
+            </div>
+            <div class="composer">
+                <img src="bach.jpg" alt="Bach">
+                <h3>یوهان سباستین باخ</h3>
+                <p>.استاد بی‌بدیل موسیقی باروک</p>
+                <a href="bach/bach.html" class="btn">بیشتر بخوانید</a>
+            </div>
+            <div class="composer">
+                <img src="beethoven.jpg" alt="Beethoven">
+                <h3>لودویگ فان بتهوون</h3>
+                <p>.یکی از تأثیرگذارترین موسیقی‌دانان تمام دوران</p>
+                <a href="beethoven/beethoven.html" class="btn">بیشتر بخوانید</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="playlist">
+        <h2>پلی‌لیست پیشنهادی</h2>
+        <ul>
+            <li>سمفونی شماره 40 - <a href="mozart/symphomy40.html">پخش</a></li>
+            <li> فوگ در ر مینور - <a href="https://youtu.be/ho9rZjlsyYY?si=OJIZ_XnVn29TGyBR">پخش</a></li>
+            <li>سمفونی شماره 5  - <a href="https://youtu.be/n3EiRynr1Us?si=uEIMnRUKnd7HgwVF">پخش</a></li>
+        </ul>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 تمامی حقوق محفوظ است. | تماس با من در <a href="https://www.instagram.com/barbod_moshky.piano/">اینستاگرام</a> و <a href="https://youtube.com/@barbodclassicalmusic?si=oWIutxO5-u2_Rn07">یوتیوب</a></p>
+    </footer>
+    <script>
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
+
+        function smoothScroll(event) {
+            event.preventDefault();
+            const targetId = event.currentTarget.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    </script>
+</body>
+</html>
