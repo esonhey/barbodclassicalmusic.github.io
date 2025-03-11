@@ -1,0 +1,86 @@
+/* تنظیمات کلی */
+body {
+    font-family: "Tahoma", sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4d2600, #d2b48c, #f2e6d9);
+    color: #333;
+    direction: rtl;
+}
+
+/* استایل کلی صفحه */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+}
+
+/* عنوان اصلی */
+h1 {
+    color: #4d2600;
+    font-family: "Georgia", serif;
+}
+
+/* عنوان‌های فرعی */
+h2 {
+    color: #d2b48c;
+}
+
+/* متن اصلی */
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* استایل عکس */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* استایل لیست آهنگ‌ها */
+.songs {
+    margin-top: 20px;
+}
+
+.songs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.songs li {
+    margin: 10px 0;
+}
+
+/* دکمه‌های آهنگ */
+.songs a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    color: #fff;
+    background-color: #4d2600;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.songs a:hover {
+    background-color: #d2b48c;
+    transform: scale(1.05);
+}
