@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ساخت اکانت اسپاتیفای رایگان</title>
-    <link rel="icon" type="image/x-icon" href="spotify_logo.png">
+    <link rel="icon" type="image/x-icon" href="spotify logo.png">
     <link rel="stylesheet" href="spotify.css"> <!-- Link to the external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .spotify-logo {
+            width: 100px;
+            height: auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label, input, button {
+            width: 100%;
+            margin: 10px 0;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #1DB954;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1AA34A;
+        }
+        footer {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            .spotify-logo {
+                width: 80px;
+            }
+            input, button {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -28,7 +88,6 @@
                 ایجاد حساب
             </button>
         </form>
-        <p>پس از دریافت اطلاعات، حساب Spotify رایگان شما ایجاد خواهد شد. با تشکر از همکاری شما!</p>
     </div>
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -41,5 +100,8 @@
             }
         });
     </script>
+    <footer>
+        <p>&copy; 2025 تمامی حقوق محفوظ است. | تماس با من در <a href="https://www.instagram.com/barbod_moshky.piano/">اینستاگرام</a> و <a href="https://youtube.com/@barbodclassicalmusic?si=oWIutxO5-u2_Rn07">یوتیوب</a></p>
+    </footer>
 </body>
 </html>
