@@ -4,28 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رکوئیم در ر مینور - ولفگانگ آمادئوس موتسارت</title>
-    <link rel="icon" type="image/x-icon" href="logo of my site.jpg">
-    <link rel="stylesheet" href="style.css">
     <meta name="description" content="رکوئیم در ر مینور آخرین اثر ولفگانگ آمادئوس موتسارت است. او این قطعه را به سفارش فردی ناشناس نوشت، اما قبل از اتمام آن درگذشت. ادامه‌ی کار توسط شاگردش، فرانتس زوسمایر، تکمیل شد.">
     <meta name="keywords" content="موتسارت, رکوئیم, موسیقی کلاسیک, آهنگساز, موسیقی">
     <meta name="author" content="باربد مشکی">
+    <link rel="icon" type="image/x-icon" href="logo of my site.jpg">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
         body.loaded {
             opacity: 1;
         }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+            text-align: center; /* مرکز کردن متن */
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        .music-info {
+            text-align: center; /* مرکز کردن متن */
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .music-info img {
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+            margin: 0 auto; /* مرکز کردن تصویر */
+        }
+        .music-player {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: #fff;
+            margin-top: 20px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* مدیا کوئری‌ها برای نمایش بهتر در گوشی */
         @media (max-width: 768px) {
             .container {
-                padding: 0 10px;
+                padding: 10px;
             }
-            .music-info img {
-                width: 100%;
-                height: auto;
+
+            .music-info {
+                padding: 10px;
             }
-            iframe {
+
+            .music-player iframe {
                 width: 100%;
                 height: auto;
             }
@@ -53,11 +134,12 @@
     </header>
     
     <section class="music-info">
-        <img src="mozartrequim.jpg" alt="رکوئیم در ر مینور">
+        <img src="mozartrequim.jpg" alt="رکوئیم در ر مینور" loading="lazy">
         <p><strong>آهنگساز:</strong> ولفگانگ آمادئوس موتسارت</p>
         <p><strong>سال ساخت:</strong> 1791</p>
         <p style="font-size: 20px;"><strong>درباره‌ی قطعه:</strong> رکوئیم در ر مینور آخرین اثر ولفگانگ آمادئوس موتسارت است. او این قطعه را به سفارش فردی ناشناس نوشت، اما قبل از اتمام آن درگذشت. ادامه‌ی کار توسط شاگردش، فرانتس زوسمایر، تکمیل شد.</p>    
     </section>
+    
     <section class="music-player">
         <h2>گوش دهید</h2>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/JoR4jeB6OI0" frameborder="0" allowfullscreen></iframe>
