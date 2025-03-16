@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="سمفونی شماره 40 اثر ولفگانگ آمادئوس موتسارت، یکی از برجسته‌ترین و مشهورترین آثار موسیقی کلاسیک">
+    <meta name="keywords" content="موتسارت, سمفونی شماره 40, موسیقی کلاسیک, آهنگساز">
     <title>سمفونی شماره 40 - موتسارت</title>
     <link rel="icon" type="image/x-icon" href="logo of my site.jpg">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header, .music-info, .music-player, footer {
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            iframe {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -15,15 +61,15 @@
                 <ul>
                     <li><a href="../index.html">صفحه اصلی</a></li>
                     <li><a href="../RECOM.html">آهنگ‌های پیشنهادی</a></li>
-                    <li><a href="../blog.html">وبلاگ</a></li>
-                    <li><a href="../contact.html">تماس با من</a></li>
+                    <li><a href="../weblog/blog.html">وبلاگ</a></li>
+                    <li><a href="../contact/contact.html">تماس با من</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
     <section class="music-info">
-        <img src="symphony40.jpg" alt="سمفونی 40">
+        <img src="symphony40.jpg" alt="سمفونی شماره 40">
         <p><strong>آهنگساز:</strong> ولفگانگ آمادئوس موتسارت</p>
         <p><strong>سال ساخت:</strong> 1788</p>
         <p><strong>درباره‌ی قطعه:</strong> .این سمفونی یکی از برجسته‌ترین و مشهورترین آثار موتسارت است که با حس عمیق و دراماتیک خود توجه بسیاری را به خود جلب کرده است</p>
@@ -35,7 +81,7 @@
     </section>
     
     <footer>
-        <p>&copy; 2025 .تمامی حقوق محفوظ است</p>
+        <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
     </footer>
 </body>
 </html>
