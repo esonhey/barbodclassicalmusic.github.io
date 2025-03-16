@@ -32,14 +32,9 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-}
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
     gap: 15px;
 }
+
 nav ul li {
     margin: 0 15px;
 }
@@ -67,21 +62,21 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 36px;
     margin-bottom: 10px;
-    color: #ffcc80; /* رنگ متناسب با رنگ‌های دیگر سایت */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* اضافه کردن سایه به متن برای زیبایی بیشتر */
+    color: #ffcc80;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #fcbc5c; /* رنگ متناسب با رنگ‌های دیگر سایت */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* اضافه کردن سایه به متن برای زیبایی بیشتر */
-    background-origin: padding-box; /* جلوگیری از اعمال سایه بر روی پس زمینه */
-    padding: 10px; /* افزودن فاصله بین متن و حاشیه‌های پاراگراف */
-    border-radius: 5px; /* گوشه‌های گرد برای پاراگراف */
-    line-height: 2; /* فاصله بین خطوط برای خوانایی بهتر */
-    max-width: 800px; /* حداکثر عرض برای جلوگیری از طولانی شدن خطوط */
-    margin: 0 auto 20px; /* مرکز کردن متن */
+    color: #fcbc5c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-origin: padding-box;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 2;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
 .btn {
@@ -105,13 +100,15 @@ nav ul li a:hover {
     justify-content: center;
     gap: 20px;
     padding: 40px 20px;
+    flex-wrap: wrap; /* اضافه کردن برای نمایش بهتر در گوشی */
 }
 
 .composer {
     background: #d7ccc8;
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
+    width: 100%; /* تغییر عرض برای نمایش بهتر در گوشی */
+    max-width: 250px; /* حداکثر عرض برای جلوگیری از بزرگ شدن بیش از حد */
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -147,4 +144,42 @@ footer a:hover {
     color: #ffab40;
 }
 
+/* مدیا کوئری‌ها برای نمایش بهتر در گوشی */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .composer-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .composer {
+        width: 100%;
+        max-width: none;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 200px;
+    }
+}
