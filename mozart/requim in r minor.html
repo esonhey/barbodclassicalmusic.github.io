@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رکوئیم در  ر مینور - ولفگانگ آمادئوس موتسارت</title>
+    <title>رکوئیم در ر مینور - ولفگانگ آمادئوس موتسارت</title>
     <link rel="icon" type="image/x-icon" href="logo of my site.jpg">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="رکوئیم در ر مینور آخرین اثر ولفگانگ آمادئوس موتسارت است. او این قطعه را به سفارش فردی ناشناس نوشت، اما قبل از اتمام آن درگذشت. ادامه‌ی کار توسط شاگردش، فرانتس زوسمایر، تکمیل شد.">
+    <meta name="keywords" content="موتسارت, رکوئیم, موسیقی کلاسیک, آهنگساز, موسیقی">
+    <meta name="author" content="باربد مشکی">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            .music-info img {
+                width: 100%;
+                height: auto;
+            }
+            iframe {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>رکوئیم در  ر مینور - ولفگانگ آمادئوس موتسارت</h1>
+            <h1>رکوئیم در ر مینور - ولفگانگ آمادئوس موتسارت</h1>
             <nav>
                 <ul>
                     <li><a href="../index.html">صفحه اصلی</a></li>
@@ -23,7 +53,7 @@
     </header>
     
     <section class="music-info">
-        <img src="mozartrequim.jpg" alt="رکوئیم در  ر مینور">
+        <img src="mozartrequim.jpg" alt="رکوئیم در ر مینور">
         <p><strong>آهنگساز:</strong> ولفگانگ آمادئوس موتسارت</p>
         <p><strong>سال ساخت:</strong> 1791</p>
         <p style="font-size: 20px;"><strong>درباره‌ی قطعه:</strong> رکوئیم در ر مینور آخرین اثر ولفگانگ آمادئوس موتسارت است. او این قطعه را به سفارش فردی ناشناس نوشت، اما قبل از اتمام آن درگذشت. ادامه‌ی کار توسط شاگردش، فرانتس زوسمایر، تکمیل شد.</p>    
@@ -38,3 +68,4 @@
     </footer>
 </body>
 </html>
+
