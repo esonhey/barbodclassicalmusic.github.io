@@ -18,6 +18,29 @@ function createMusicNote() {
 
 // هر چند وقت یک‌بار نت ایجاد شود
 setInterval(createMusicNote, 700);
+window.addEventListener('load', function() {
+    document.body.classList.add('loaded');
+});
 
+const themeToggle = document.getElementById("theme-toggle");
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme === "dark") {
+    document.body.classList.add("dark-theme");
+    document.body.classList.remove("light-theme");
+} else {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+}
+
+themeToggle.addEventListener("click", function() {
+    document.body.classList.toggle("dark-theme");
+    document.body.classList.toggle("light-theme");
+    if (document.body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
 
 
