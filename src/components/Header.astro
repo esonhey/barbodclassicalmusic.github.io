@@ -1,0 +1,63 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../consts";
+---
+
+<header>
+  <div class="container">
+    <img class="logo" src="/logo.jpg" alt="لوگوی سایت باربد مشکی" />
+    <nav>
+      <ul>
+        <li><HeaderLink href="/">صفحه اصلی</HeaderLink></li>
+        <li><HeaderLink href="/about-me.html">درباره من</HeaderLink></li>
+        <li>
+          <HeaderLink href="/youtube-videos.html">اجرا های من</HeaderLink>
+        </li>
+        <li>
+          <HeaderLink href="/recommend.html">آهنگ‌های پیشنهادی</HeaderLink>
+        </li>
+        <li><HeaderLink href="/weblog/blog.html">وبلاگ</HeaderLink></li>
+        <li>
+          <HeaderLink href="/spotify-segment.html"
+            >ساخت اکانت اسپاتیفای</HeaderLink
+          >
+        </li>
+        <li><HeaderLink href="/contact.html">تماس با من</HeaderLink></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* هدر */
+  header {
+    background-color: #3e2723;
+    color: white;
+    padding: 15px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 75px;
+    height: auto;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+</style>
