@@ -1,7 +1,26 @@
-# Astro Starter Kit: Basics
+## How to run it
 
-```sh
-pnpm create astro@latest -- --template basics
+you need `node` and `pnpm`
+the instruction below works mac/linux/wsl:
+
+```bash
+# (if you don't have node.js) install Volta
+curl https://get.volta.sh | bash
+
+# install Node with volta
+volta install node
+
+# install pnpm to manage dependencies
+volta install pnpm
+
+# install dependencies
+pnpm i
+
+# start
+pnpm start
+# test build
+pnpm preview
+
 ```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
