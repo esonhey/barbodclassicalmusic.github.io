@@ -51,8 +51,8 @@ import { SITE_DESCRIPTION } from "../consts";
           target="_blank">یوتیوب</a
         >
       </div>
-      <a href="index.html" class="back-button">بازگشت به صفحه اصلی</a>
     </div>
+  <a href="/youtube-videos"> <button class="performance">اجرا های من.</button>    </a>
     <Footer />
   </body>
 </html>
@@ -86,11 +86,34 @@ import { SITE_DESCRIPTION } from "../consts";
     color: #2c3e50;
     animation: fadeInDown 1s ease-in-out;
   }
+  button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+  }
   p {
-    line-height: 1.8;
+    font-size: 18px;
+    color: #34495e;
+    margin: 10px 0;
+    line-height: 1.6;
     text-align: justify;
     animation: fadeIn 1.5s ease-in-out;
   }
+
   .social-links {
     display: flex;
     justify-content: center;
@@ -117,22 +140,12 @@ import { SITE_DESCRIPTION } from "../consts";
   .youtube {
     background: #ff0000;
   }
-  .back-button {
-    display: block;
-    width: 150px;
-    margin: 20px auto;
-    padding: 10px 20px;
-    text-align: center;
-    background-color: #2c3e50;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    animation: fadeIn 2s ease-in-out;
-  }
-  .back-button:hover {
-    background-color: #34495e;
-  }
+   .performance {
+  direction: rtl;
+  display: flex;
+  size: 20cm;
+  
+   }
 
   @keyframes fadeIn {
     from {
