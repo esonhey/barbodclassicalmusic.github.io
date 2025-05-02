@@ -60,4 +60,22 @@ import { SITE_TITLE } from "../consts";
   nav ul li {
     margin: 0 15px;
   }
+
+  /* استایل برای گوشی */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 15px;
+    }
+  }
 </style>

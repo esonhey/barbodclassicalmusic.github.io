@@ -1,0 +1,146 @@
+/* فونت پیش‌فرض (می‌تونی فونت دلخواه خودتو بذاری) */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;800&display=swap');
+
+:root {
+  --bg-light: #ffe5c6;
+  --bg-dark: #3c2f2f;
+  --text-light: #222;
+  --text-dark: #eee;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #2a2a35;
+  --accent-color: #ffbc9f;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vazirmatn', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  line-height: 1.7;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+.music-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--card-bg-light);
+  border-radius: 1.25rem;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .music-item {
+  background-color: var(--card-bg-dark);
+  box-shadow: 0 4px 12px var(--shadow-dark);
+}
+
+.music-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px var(--shadow-light);
+}
+
+.music-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.music-details h2 {
+  font-size: 1.5rem;
+  color: inherit;
+  margin: 0;
+  direction: ltr;
+}
+
+.music-details p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: inherit;
+ direction: ltr;
+}
+
+.music-details audio {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .music-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .music-item img {
+    width: 300px;
+    max-height: 200px;
+    flex-shrink: 0;
+  }
+
+  .music-details {
+    flex: 1;
+    padding-left: 1.5rem;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  footer a:hover {
+    text-decoration: underline;
+  }
+}
+.theme-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .theme-btn:hover {
+    background-color: #684cd6;
+  }
+  

@@ -8,7 +8,6 @@ if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
     const form = Astro.request.target as HTMLFormElement;
-    // Do something with the data
 
     fetch(form.action, {
       method: "POST",
@@ -19,9 +18,8 @@ if (Astro.request.method === "POST") {
     })
       .then((response) => {
         if (response.ok) {
-          document!
-            .getElementById("response-message")!
-            .classList.remove("hidden");
+          // نمایش پیام موفقیت‌آمیز
+          document.getElementById("success-message")!.classList.remove("hidden");
           form.reset();
         } else {
           alert("خطایی رخ داده است. لطفاً دوباره تلاش کنید.");
@@ -58,30 +56,33 @@ if (Astro.request.method === "POST") {
           <label for="name">:نام</label>
           <input type="text" id="name" name="name" required />
         </div>
-
+    
         <div class="form-group">
           <label for="email">:ایمیل</label>
           <input type="email" id="email" name="email" required />
         </div>
-
+    
         <div class="form-group">
           <label for="message">:پیام</label>
           <textarea id="message" name="message" required></textarea>
         </div>
-
+    
         <div class="wrap">
-          <button class="button">ارسال</button>
+          <button class="button" type="submit">ارسال</button>
         </div>
-        <p id="response-message" class="hidden">!پیام شما با موفقیت ارسال شد</p>
       </form>
-
+    
+      <!-- Success message -->
+      <div id="success-message" class="hidden success-message">
+        <p>پیام شما با موفقیت ارسال شد! با تشکر از شما.</p>
+      </div>
+    
       <div class="contact-info">
         <h2>اطلاعات تماس</h2>
         <p>ایمیل: bmoshky@gmail.com</p>
         <p>.شبکه‌های اجتماعی</p>
         <div class="social-links">
-          <a href="https://www.instagram.com/barbod_moshky.piano/">اینستاگرام</a
-          >
+          <a href="https://www.instagram.com/barbod_moshky.piano/">اینستاگرام</a>
           <a href="https://t.me/barbodclassicalmusic">تلگرام</a>
         </div>
       </div>
@@ -142,6 +143,22 @@ if (Astro.request.method === "POST") {
     align-items: center;
     justify-content: center;
   }
+
+.success-message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+  border-radius: 8px;
+  color: #2e7d32;
+  font-size: 18px;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
 
   .button {
     min-width: 300px;
@@ -253,16 +270,100 @@ if (Astro.request.method === "POST") {
     border-top: 1px solid #ddd;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    width: calc(100% - 40px);
-    max-width: 500px;
-    padding: 10px;
-    margin: 5px 0; /* کاهش فاصله بین اینپوت‌ها */
-    border: 1px solid #8b4513;
-    border-radius: 5px;
-    font-size: 16px;
+/* General input styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus {
+  border-color: #4caf50;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+/* Hover effect */
+input:hover,
+textarea:hover {
+  border-color: #81c784;
+}
+
+/* Disabled state */
+input:disabled,
+textarea:disabled {
+  background: #e0e0e0;
+  border-color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+/* Error state */
+input.error,
+textarea.error {
+  border-color: #e57373;
+  background: #ffebee;
+}
+
+input.error:focus,
+textarea.error:focus {
+  box-shadow: 0 4px 8px rgba(229, 115, 115, 0.2);
+}
+
+/* Success state */
+input.success,
+textarea.success {
+  border-color: #81c784;
+  background: #e8f5e9;
+}
+
+input.success:focus,
+textarea.success:focus {
+  box-shadow: 0 4px 8px rgba(129, 199, 132, 0.2);
+}
+
+/* Textarea specific styling */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Animation for input appearance */
+@keyframes inputLoad {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input,
+textarea {
+  animation: inputLoad 0.5s ease-in-out;
+}
 
   .social-links a {
     display: inline-block;
@@ -318,24 +419,5 @@ if (Astro.request.method === "POST") {
       transform: scale(1);
     }
   }
-  footer {
-    background-color: #3e2723;
-    color: white;
-    padding: 15px 0;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
 
-  footer a {
-    color: #ffcc80;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  footer a:hover {
-    color: #ffab40;
-  }
 </style>

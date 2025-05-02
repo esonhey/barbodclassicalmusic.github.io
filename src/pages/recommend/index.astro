@@ -1,0 +1,33 @@
+---
+import MusicListLazyLoad from "../../components/MusicListLazyLoad.jsx";
+import Header from "../../components/Header.astro";
+
+---
+
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>پیشنهادات موسیقی</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/Music-item.css" />
+    <link rel="shortcut icon" href="/logo.jpg" type="image/x-icon">
+    <script src="/theme-toggle.js" defer></script>
+
+  </head>
+  <Header />
+  <body dir="rtl">
+    <h1>🎵 پیشنهادات موسیقی کلاسیک</h1>
+    <MusicListLazyLoad client:load />
+    <button id="theme-toggle" class="theme-btn">🌙 تاریک</button>
+    <footer>  <p>
+      &copy; 2025 تمامی حقوق محفوظ است. | تماس با من در <a
+        href="https://www.instagram.com/barbod_moshky.piano/">اینستاگرام</a
+      > و <a href="https://youtube.com/@barbodclassicalmusic?si=oWIutxO5-u2_Rn07"
+        >یوتیوب</a
+      >
+    </p></footer>
+  </body>
+</html>
+<script>
+  // اینجا می‌تونیم کد جاوااسکریپت رو بنویسیم
+  // مثلاً برای بارگذاری تنبل یا هر کار دیگه‌ای که نیاز داریم
