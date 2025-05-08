@@ -7,7 +7,7 @@ import { SITE_DESCRIPTION } from "../consts";
 if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
-    const form = Astro.request.target as HTMLFormElement;
+    const form = document.getElementById("contactForm") as HTMLFormElement;
     // Do something with the data
 
     fetch(form.action, {
