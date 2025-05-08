@@ -1,0 +1,27 @@
+---
+import MusicListLazyLoad from "../../components/MusicListLazyLoad.jsx";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+---
+
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <title>پیشنهادات موسیقی</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/Music-item.css" />
+    <link rel="shortcut icon" href="/logo.jpg" type="image/x-icon">
+    <script src="/theme-toggle.js" defer></script>
+
+  </head>
+  <Header />
+  <body dir="rtl">
+    <h1>🎵 پیشنهادات موسیقی کلاسیک</h1>
+    <MusicListLazyLoad client:load />
+    <Footer />
+  </body>
+</html>
+<script>
+  // اینجا می‌تونیم کد جاوااسکریپت رو بنویسیم
+  // مثلاً برای بارگذاری تنبل یا هر کار دیگه‌ای که نیاز داریم

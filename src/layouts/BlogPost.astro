@@ -1,0 +1,42 @@
+---
+// filepath: c:\Users\ASUS\Desktop\astro-project\barbodclassicalmusic.github.io\src\layouts\BlogPostLayout.astro
+interface Props {
+  title: string;
+  description: string;
+  pubDate: string;
+  heroImage: string;
+}
+
+const { title, description, pubDate, heroImage } = Astro.props;
+---
+
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="/src/styles/article-style.css" />
+  </head>
+  <body>
+    <article class="blog-post">
+      <header class="blog-header">
+        <div class="blog-header-content">
+          <h1>{title || "عنوان نامشخص"}</h1>
+          <p class="date">
+            منتشر شده در: {pubDate && !isNaN(Date.parse(pubDate)) 
+              ? new Date(pubDate).toLocaleDateString("fa-IR", { year: "numeric", month: "long", day: "numeric" }) 
+              : "تاریخ نامعتبر"}
+          </p>
+        </div>
+        <img src={heroImage || "/default-image.png"} alt={title || "تصویر نامشخص"} />
+      </header>
+      <main class="blog-content">
+        <slot />
+      </main>
+      <footer>
+        <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
+      </footer>
+    </article>
+  </body>
+</html>

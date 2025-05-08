@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "B Nazanin";
+    src: url("/fonts/b-nazanin.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "B Nazanin";
+    src: url("/fonts/b-nazanin-bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: "B Nazanin", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ede4d3;
+    color: #5a3e2b;  
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+main {
+    width: 720px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 3em 1em;
+}

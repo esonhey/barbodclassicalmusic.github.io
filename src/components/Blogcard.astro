@@ -1,0 +1,60 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  pubDate: string;
+  link: string;
+  heroImage: string;
+}
+
+const { title, description, pubDate, link, heroImage } = Astro.props;
+---
+
+<article class="post">
+  <a href={link}>
+    <img src={heroImage} alt={title} />
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <time>{new Date(pubDate).toLocaleDateString("fa-IR")}</time>
+  </a>
+</article>
+
+<style>
+  .post {
+    background: #fff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  .post:hover {
+    transform: scale(1.02);
+  }
+  .post img {
+    width: 50%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+  .post h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .post p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+  .post time {
+    font-size: 0.875rem;
+    color: #999;
+  }
+  .post a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .post a:hover h2 {
+    color: #007bff;
+  }
+</style>

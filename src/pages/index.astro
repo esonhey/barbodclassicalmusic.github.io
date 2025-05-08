@@ -1,0 +1,216 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <section class="hero">
+      <h1>به دنیای موسیقی کلاسیک خوش آمدید</h1>
+      <p>کاوشی در دنیای موسیقی فاخر و بی‌نظیر کلاسیک</p>
+      <a id="composers-link" href="#composers" class="btn smooth-scroll-link"
+        >بیشتر بخوانید</a
+      >
+    </section>
+
+    <section id="composers" class="composers">
+      <h2>آهنگسازان بزرگ</h2>
+      <div class="composer-list">
+        <div class="composer">
+          <img src="mozart.jpg" alt="ولفگانگ آمادئوس موتسارت" />
+          <h3>ولفگانگ آمادئوس موتسارت</h3>
+          <p>.یکی از بزرگ‌ترین آهنگسازان تاریخ</p>
+          <a href="mozart.html" class="btn">بیشتر بخوانید</a>
+        </div>
+        <div class="composer">
+          <img src="bach.jpg" alt="یوهان سباستین باخ" />
+          <h3>یوهان سباستین باخ</h3>
+          <p>.استاد بی‌بدیل موسیقی باروک</p>
+          <a href="bach.html" class="btn">بیشتر بخوانید</a>
+        </div>
+        <div class="composer">
+          <img src="beethoven.jpg" alt="لودویگ فان بتهوون" />
+          <h3>لودویگ فان بتهوون</h3>
+          <p>.یکی از تأثیرگذارترین موسیقی‌دانان تاریخ </p>
+          <a href="beethoven.html" class="btn">بیشتر بخوانید</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="playlist">
+      <h2>پلی‌لیست پیشنهادی</h2>
+      <ul>
+        <li>سمفونی شماره 40 - <a href="mozart/symphomy40.html">پخش</a></li>
+        <li>
+          فوگ در ر مینور - <a
+            href="https://youtu.be/ho9rZjlsyYY?si=OJIZ_XnVn29TGyBR">پخش</a
+          >
+        </li>
+        <li>
+          سمفونی شماره 5 - <a
+            href="https://youtu.be/n3EiRynr1Us?si=uEIMnRUKnd7HgwVF">پخش</a
+          >
+        </li>
+      </ul>
+    </section>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  /* بخش معرفی */
+  .hero {
+    background-image: url("piano-background.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #ffcc80;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fcbc5c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-origin: padding-box;
+    padding: 10px;
+    border-radius: 5px;
+    line-height: 2;
+    max-width: 800px;
+    margin: 0 auto 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #795548;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #a1887f;
+    transform: scale(1.1);
+  }
+
+  /* بخش آهنگسازان */
+  .composer-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+    flex-wrap: wrap; /* اضافه کردن برای نمایش بهتر در گوشی */
+  }
+
+  .composer {
+    background: #d7ccc8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* تغییر عرض برای نمایش بهتر در گوشی */
+    max-width: 250px; /* حداکثر عرض برای جلوگیری از بزرگ شدن بیش از حد */
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .composer:hover {
+    transform: translateY(-5px);
+  }
+
+  .composer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .playlist {
+    padding: 40px 20px;
+  }
+
+  .playlist ul {
+    list-style: none;
+  }
+
+  /* مدیا کوئری‌ها برای نمایش بهتر در گوشی */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .hero {
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+    }
+
+    .hero p {
+      font-size: 18px;
+    }
+
+    .composer-list {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .composer {
+      width: 100%;
+      max-width: none;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener("load", function () {
+    document.body.classList.add("loaded");
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Option 1: Using a class
+    const linksByClass = document.querySelectorAll(".smooth-scroll-link");
+    linksByClass.forEach((link) => {
+      link.addEventListener("click", smoothScroll);
+    });
+  });
+
+  function smoothScroll(event: any) {
+    event.preventDefault();
+    const targetId = event.currentTarget.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: "smooth",
+    });
+  }
+</script>
