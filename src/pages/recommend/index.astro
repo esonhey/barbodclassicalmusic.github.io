@@ -1,6 +1,7 @@
 ---
 import MusicListLazyLoad from "../../components/MusicListLazyLoad.jsx";
 import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 
 ---
 
@@ -18,14 +19,7 @@ import Header from "../../components/Header.astro";
   <body dir="rtl">
     <h1>🎵 پیشنهادات موسیقی کلاسیک</h1>
     <MusicListLazyLoad client:load />
-    <button id="theme-toggle" class="theme-btn">🌙 تاریک</button>
-    <footer>  <p>
-      &copy; 2025 تمامی حقوق محفوظ است. | تماس با من در <a
-        href="https://www.instagram.com/barbod_moshky.piano/">اینستاگرام</a
-      > و <a href="https://youtube.com/@barbodclassicalmusic?si=oWIutxO5-u2_Rn07"
-        >یوتیوب</a
-      >
-    </p></footer>
+    <Footer />
   </body>
 </html>
 <script>
