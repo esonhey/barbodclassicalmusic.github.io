@@ -1,43 +1,42 @@
-<!doctype html>
-<html lang="en">
+---
+// filepath: c:\Users\ASUS\Desktop\astro-project\barbodclassicalmusic.github.io\src\layouts\BlogPostLayout.astro
+interface Props {
+  title: string;
+  description: string;
+  pubDate: string;
+  heroImage: string;
+}
+
+const { title, description, pubDate, heroImage } = Astro.props;
+---
+
+<html lang="fa">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="../../src/styles/article-style.css" />
   </head>
   <body>
-    <slot />
+    <article class="blog-post">
+      <header class="blog-header">
+        <div class="blog-header-content">
+          <h1>{title || "عنوان نامشخص"}</h1>
+          <p class="date">
+            منتشر شده در: {pubDate && !isNaN(Date.parse(pubDate)) 
+              ? new Date(pubDate).toLocaleDateString("fa-IR", { year: "numeric", month: "long", day: "numeric" }) 
+              : "تاریخ نامعتبر"}
+          </p>
+        </div>
+        <img src={heroImage || "/default-image.png"} alt={title || "تصویر نامشخص"} />
+      </header>
+      <main class="blog-content">
+        <slot />
+      </main>
+      <footer>
+        <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
+      </footer>
+    </article>
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  body {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  body.loaded {
-    opacity: 1;
-  }
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #ede4d3;
-    color: #5a3e2b;
-  }
-  .container {
-    flex-grow: 1;
-  }
-</style>
