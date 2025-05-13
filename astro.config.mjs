@@ -10,5 +10,7 @@ export default defineConfig({
   site: "https://barbodclassicalmusic.com",
   integrations: [react(), mdx(), sitemap()],
   output: "static", 
+  outDir: './dist',
+  publicDir: './public',
 });
 
