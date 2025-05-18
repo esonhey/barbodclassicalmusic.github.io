@@ -24,12 +24,21 @@ const { title, description, pubDate, heroImage } = Astro.props;
         <div class="blog-header-content">
           <h1>{title || "عنوان نامشخص"}</h1>
           <p class="date">
-            منتشر شده در: {pubDate && !isNaN(Date.parse(pubDate)) 
-              ? new Date(pubDate).toLocaleDateString("fa-IR", { year: "numeric", month: "long", day: "numeric" }) 
-              : "تاریخ نامعتبر"}
+            منتشر شده در: {
+              pubDate && !isNaN(Date.parse(pubDate))
+                ? new Date(pubDate).toLocaleDateString("fa-IR", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })
+                : "تاریخ نامعتبر"
+            }
           </p>
         </div>
-        <img src={heroImage || "/default-image.png"} alt={title || "تصویر نامشخص"} />
+        <img
+          src={heroImage || "/default-image.png"}
+          alt={title || "تصویر نامشخص"}
+        />
       </header>
       <main class="blog-content">
         <slot />

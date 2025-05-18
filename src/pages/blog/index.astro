@@ -1,8 +1,7 @@
 ---
-title: "وبلاگ موسیقی | مقالات و آموزش‌های موسیقی"
-description: "به وبلاگ موسیقی خوش آمدید. در اینجا مقالات و آموزش‌های مرتبط با موسیقی کلاسیک و آهنگسازان بزرگ را پیدا خواهید کرد."
 const SITE_TITLE = "وبلاگ موسیقی | مقالات و آموزش‌های موسیقی";
-const SITE_DESCRIPTION = "به وبلاگ موسیقی خوش آمدید. در اینجا مقالات و آموزش‌های مرتبط با موسیقی کلاسیک و آهنگسازان بزرگ را پیدا خواهید کرد.";
+const SITE_DESCRIPTION =
+  "به وبلاگ موسیقی خوش آمدید. در اینجا مقالات و آموزش‌های مرتبط با موسیقی کلاسیک و آهنگسازان بزرگ را پیدا خواهید کرد.";
 import BaseHead from "../../components/BaseHead.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
@@ -22,24 +21,25 @@ const posts = (await getCollection("blog")).sort(
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/src/styles/global.css" />
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-
   </head>
   <body>
     <Header />
     <main>
       <section>
         <ul>
-          {posts.map((post: any) => (
-            <li>
-              <Blogcard
-                title={post.data.title}
-                description={post.data.description}
-                pubDate={post.data.pubDate}
-                link={`/blog/${post.id}`}
-                heroImage={post.data.heroImage}
-              />
-            </li>
-          ))}
+          {
+            posts.map((post: any) => (
+              <li>
+                <Blogcard
+                  title={post.data.title}
+                  description={post.data.description}
+                  pubDate={post.data.pubDate}
+                  link={`/blog/${post.id}`}
+                  heroImage={post.data.heroImage}
+                />
+              </li>
+            ))
+          }
         </ul>
       </section>
     </main>
