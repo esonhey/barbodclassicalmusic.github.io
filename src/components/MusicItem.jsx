@@ -1,4 +1,3 @@
-// src/components/MusicItem.jsx
 import "../styles/Music-item.css";
 
 export default function MusicItem({ imgSrc, imgAlt, headerTitle, desc, src, type }) {

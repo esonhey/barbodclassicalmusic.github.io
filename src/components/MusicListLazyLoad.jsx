@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
+import MusicItem from "./MusicItem";
 import musicData from "../data/music-recommendations";
-
-
-
 
 function MusicListLazyLoad() {
   const [visibleCount, setVisibleCount] = useState(10);
@@ -25,18 +23,10 @@ function MusicListLazyLoad() {
   return (
     <div>
       {visibleMusic.map((item, index) => (
-        <div key={index} className="music-item">
-          <img src={item.imgSrc} alt={item.imgAlt} loading="lazy" />
-          <div className="music-details">
-            <h2>{item.headerTitle}</h2>
-            <p>{item.desc}</p>
-            <audio controls>
-              <source src={item.src} type={item.type} />
-              مرورگر شما از پخش فایل صوتی پشتیبانی نمی‌کند.
-            </audio>
-          </div>
-        </div>
-      ))}
+        <MusicItem
+          key={index}
+          {...item}
+        />))}
     </div>
   );
 }
